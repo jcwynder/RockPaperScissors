@@ -1,0 +1,109 @@
+.container {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 10px;
+  width: 150px;
+  height: 100%;
+  line-height: 1;
+}
+
+.score__title {
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  color: $ScoreText;
+}
+
+.score__number {
+  font-size: 4rem;
+  font-weight: 700;
+  color: $DarkText;
+}
+
+.choice {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  background: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: inset 0 0.5rem var($ShadowLight);
+}
+.choice::before,
+.choice::after {
+  content: "";
+  position: absolute;
+  left: -15%;
+  top: -15%;
+  width: 130%;
+  height: 130%;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.choice.paper::before {
+  background: linear-gradient(to bottom, var($Paper1), var($paper2));
+  box-shadow: 0 0.5rem var($shadowMed), 0 0.5rem var($paper2);
+}
+.choice.scissors::before {
+  background: linear-gradient(to bottom, var($Scissors1), var($Scissors2));
+  box-shadow: 0 0.5rem var($shadowMed), 0 0.5rem var($Scissors2);
+}
+.choice.rock::before {
+  background: linear-gradient(to bottom, var($rock1), var($rock2));
+  box-shadow: 0 0.5rem var($shadowMed), 0 0.5rem var($rock2);
+}
+
+.results__result {
+  min-width: 10rem;
+  min-height: 10rem;
+  background: #16213d;
+  border-radius: 50%;
+  transform: scale(1.4);
+  z-index: -1;
+}
+
+.results__result:first-of-type {
+  grid-area: you-picked;
+}
+.results__result:last-of-type {
+  grid-area: ai-picked;
+}
+
+.results__winner {
+  grid-area: result-winner;
+  display: grid;
+  place-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  background: var($shadowMed);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+.modal__container {
+  background: #fff;
+  border-radius: 0.5rem;
+}

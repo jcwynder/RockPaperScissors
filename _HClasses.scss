@@ -1,0 +1,22 @@
+.results__heading {
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  padding: 4rem 0 8rem;
+}
+
+.results__heading:first-of-type {
+  grid-area: you-title;
+}
+.results__heading:last-of-type {
+  grid-area: ai-title;
+}
+
+.modal__heading {
+  font-size: 1.5rem;
+  color: var($DarkText);
+}
+
+.results__text {
+  font-size: 3.5rem;
+  padding-bottom: 1.5rem;
+}

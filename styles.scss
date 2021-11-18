@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+@import "./Variables";
+@import "./Body";
+@import "./DivClasses";
+@import "./Headers";
+@import "./Images";
+@import "./Section";
+@import "./Buttons";
+@import "./HClasses";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes winner {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.show-modal {
+  opacity: 1;
+  pointer-events: initial;
+}
